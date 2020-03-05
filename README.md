@@ -4,6 +4,14 @@ Utility script to clone repos in CircleCI workflows
 
 ## Installing
 
+### Script Download
+The easiest way to install is run in a terminal:
+```shell
+> curl -sL https://git.io/JvVAE | bash
+```
+make sure the user has write permissions to `/usr/local/bin`.
+
+### Git Install
 After checking out the git repo, run `install.sh local`
 
 ### Manual Download
