@@ -9,11 +9,10 @@ fi
 git --version
 
 # Add github as an ssh known host
-mkdir -p ${HOME}/.ssh
-if ! grep github.com ${HOME}/.ssh/config > /dev/null; then
-     echo "Host github.com" >> ${HOME}/.ssh/config
-     echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
-     echo "  UserKnownHostsFile /dev/null" >> ${HOME}/.ssh/config
+mkdir -p "${HOME}/.ssh"
+if ! grep github.com "${HOME}/.ssh/config" > /dev/null; then
+     echo "Host github.com" >> "${HOME}/.ssh/config"
+     echo "  StrictHostKeyChecking accept-new" >> "${HOME}/.ssh/config"
 fi
 # hide the paragraph about being in a detached head state, no one cares
 git config advice.detachedHead false
